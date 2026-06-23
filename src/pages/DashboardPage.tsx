@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import {
-  LayoutGrid, Calendar, Wallet, Briefcase, MessageSquare, Settings,
+  LayoutGrid, Calendar, Wallet, Briefcase, Settings,
   LifeBuoy, TrendingUp, Star, Plane, Bell, LogOut, Eye, CheckCircle2,
   Clock, XCircle, Camera, Edit3, Plus, BarChart2,
 } from 'lucide-react';
@@ -63,7 +63,7 @@ export function DashboardPage() {
   const { setAuthUser, toggleAvailability } = useStore();
   const creator = useCurrentCreator();
   const [tab, setTab] = useState<Tab>('overview');
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
 
   const handleLogout = () => {
     setAuthUser(null);
