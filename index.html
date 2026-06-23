@@ -4,9 +4,21 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Get Flick Connect — Hire Verified Photographers & Videographers</title>
+    <title>
+      Get Flick Connect — Hire Verified Photographers & Videographers
+    </title>
+    <!-- Prevent white flash before CSS loads -->
+    <style>
+      html,
+      body,
+      #root {
+        margin: 0;
+        background: #07070f;
+        min-height: 100vh;
+      }
+    </style>
   </head>
-  <body>
+  <body style="background: #07070f; margin: 0">
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>

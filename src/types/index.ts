@@ -1,6 +1,13 @@
 export type ServiceType = 'Videographer' | 'Photographer' | 'Both';
-
 export type BookingStatus = 'pending' | 'accepted' | 'completed' | 'cancelled';
+
+export interface AuthUser {
+  id: string;
+  name: string;
+  email: string;
+  phone: string;
+  role: 'client' | 'creator';
+}
 
 export interface Booking {
   id: string;
@@ -55,4 +62,6 @@ export interface Creator {
   bookings: Booking[];
   reviews: Review[];
   joinedDate: string;
+  phone?: string;
+  email?: string;
 }

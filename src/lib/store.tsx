@@ -1,11 +1,12 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
-import type { Creator } from '../types';
-import { SEED_CREATORS } from './mockData';
+import type { Creator, AuthUser } from '../types';
 
 interface StoreShape {
   creators: Creator[];
-  currentCreatorId: string;
+  authUser: AuthUser | null;
+  currentCreatorId: string | null;
   setCurrentCreatorId: (id: string) => void;
+  setAuthUser: (user: AuthUser | null) => void;
   addCreator: (creator: Creator) => void;
   updateCreator: (id: string, patch: Partial<Creator>) => void;
   toggleAvailability: (id: string) => void;
@@ -14,8 +15,9 @@ interface StoreShape {
 const StoreContext = createContext<StoreShape | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [creators, setCreators] = useState<Creator[]>(SEED_CREATORS);
-  const [currentCreatorId, setCurrentCreatorId] = useState<string>(SEED_CREATORS[0].id);
+  const [creators, setCreators] = useState<Creator[]>([]);
+  const [authUser, setAuthUser] = useState<AuthUser | null>(null);
+  const [currentCreatorId, setCurrentCreatorId] = useState<string | null>(null);
 
   const addCreator = (creator: Creator) => {
     setCreators((prev) => [...prev, creator]);
@@ -34,7 +36,7 @@ export function StoreProvider({ children }: { children: ReactNode }) {
 
   return (
     <StoreContext.Provider
-      value={{ creators, currentCreatorId, setCurrentCreatorId, addCreator, updateCreator, toggleAvailability }}
+      value={{ creators, authUser, currentCreatorId, setCurrentCreatorId, setAuthUser, addCreator, updateCreator, toggleAvailability }}
     >
       {children}
     </StoreContext.Provider>
@@ -49,5 +51,6 @@ export function useStore() {
 
 export function useCurrentCreator() {
   const { creators, currentCreatorId } = useStore();
-  return creators.find((c) => c.id === currentCreatorId) ?? creators[0];
+  if (!currentCreatorId) return null;
+  return creators.find((c) => c.id === currentCreatorId) ?? null;
 }

@@ -16,6 +16,8 @@ function App() {
   return (
     <StoreProvider>
       <HashRouter>
+        {/* Ambient centre orb — breathing gold glow */}
+        <div className="orb-mid" aria-hidden="true" />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/browse" element={<BrowsePage />} />
