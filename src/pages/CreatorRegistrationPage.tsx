@@ -65,7 +65,7 @@ export function CreatorRegistrationPage() {
       id: newId,
       name: fullName || 'New Creator',
       avatarInitials: initials,
-      avatarColor: '#FF5A1F',
+      avatarColor: '#D4AF6E',
       location: location || 'Unspecified',
       yearsExperience: Number(experience) || 0,
       bio: bio || 'New creator on Get Flick Connect, ready to bring your vision to life.',

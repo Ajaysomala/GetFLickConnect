@@ -44,7 +44,7 @@ function EmptyState({ icon, title, body, cta, to }: { icon: React.ReactNode; tit
   return (
     <div className="flex flex-col items-center justify-center py-20 text-center">
       <div className="w-16 h-16 rounded-2xl flex items-center justify-center mb-5 text-text-faint"
-        style={{ background: 'rgba(99,179,237,.08)', border: '1px solid rgba(99,179,237,.12)' }}>
+        style={{ background: 'rgba(212,175,110,.08)', border: '1px solid rgba(212,175,110,.12)' }}>
         {icon}
       </div>
       <h3 className="font-display font-bold text-lg mb-2">{title}</h3>
@@ -76,7 +76,7 @@ export function DashboardPage() {
       <div className="min-h-screen flex items-center justify-center px-6" style={{ background: 'transparent' }}>
         <div className="text-center max-w-md animate-fade-up">
           <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-6"
-            style={{ background: 'linear-gradient(135deg,#3B82F6,#4FD1C5)', boxShadow: '0 16px 40px rgba(99,179,237,.3)' }}>
+            style={{ background: 'linear-gradient(135deg,#E8C98A,#D4AF6E)', boxShadow: '0 16px 40px rgba(212,175,110,.3)' }}>
             <Camera size={32} className="text-white" />
           </div>
           <h1 className="font-display text-3xl font-black mb-3">Set up your profile</h1>

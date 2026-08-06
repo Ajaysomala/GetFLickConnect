@@ -182,8 +182,13 @@ export function CreatorProfilePage() {
               ) : (
                 <div className="grid grid-cols-3 gap-2">
                   {creator.photos.map((src, i) => (
-                    <div key={i} className="aspect-square rounded-lg overflow-hidden border border-line-soft">
-                      <img src={src} alt={`Work sample ${i + 1}`} className="w-full h-full object-cover" />
+                    <div key={i} className="aspect-square rounded-xl overflow-hidden border border-line-soft group">
+                      <img
+                        src={src}
+                        alt={`Work sample ${i + 1}`}
+                        loading="lazy"
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
                     </div>
                   ))}
                 </div>
