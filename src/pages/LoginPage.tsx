@@ -57,9 +57,9 @@ function OtpInput({ value, onChange }: { value: string[]; onChange: (v: string[]
           className="w-12 h-14 text-center text-xl font-bold rounded-xl border-2 outline-none transition-all duration-200"
           style={{
             background: 'rgba(10,16,32,.9)',
-            borderColor: digit ? 'rgba(99,179,237,.7)' : 'rgba(99,179,237,.18)',
+            borderColor: digit ? 'rgba(212,175,110,.7)' : 'rgba(212,175,110,.18)',
             color: '#E8F4FF',
-            boxShadow: digit ? '0 0 0 3px rgba(99,179,237,.12)' : 'none',
+            boxShadow: digit ? '0 0 0 3px rgba(212,175,110,.12)' : 'none',
           }}
         />
       ))}
@@ -134,7 +134,7 @@ export function LoginPage() {
         <div className="relative z-10 text-center px-16 animate-fade-up">
           <div
             className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-8 pulse-ring"
-            style={{ background: 'linear-gradient(135deg,#3B82F6,#4FD1C5)', boxShadow: '0 16px 40px rgba(99,179,237,.35)' }}
+            style={{ background: 'linear-gradient(135deg,#E8C98A,#D4AF6E)', boxShadow: '0 16px 40px rgba(212,175,110,.35)' }}
           >
             <ShieldCheck size={32} className="text-white" />
           </div>

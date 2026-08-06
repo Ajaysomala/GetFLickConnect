@@ -39,9 +39,9 @@ export function Filmstrip({ photos, size = 'md', scroll = false, orientation = '
   if (orientation === 'vertical') {
     return (
       <div className={`relative overflow-hidden ${className}`}>
-        <div className="flex flex-col bg-[#0E0E10] gap-0 h-full">
+        <div className="flex flex-col bg-[#100E0C] gap-0 h-full">
           {sequence.map((src, i) => (
-            <div key={i} className="flex flex-col items-stretch bg-[#0E0E10] border-x border-line-soft flex-1 min-h-0">
+            <div key={i} className="flex flex-col items-stretch bg-[#100E0C] border-x border-line-soft flex-1 min-h-0">
               <Sprockets vertical />
               <div className="relative flex-1 min-h-0 overflow-hidden border-y border-line-soft bg-panel">
                 <img
@@ -61,9 +61,9 @@ export function Filmstrip({ photos, size = 'md', scroll = false, orientation = '
 
   return (
     <div className={`relative overflow-hidden ${className}`}>
-      <div className={`flex bg-[#0E0E10] ${scroll ? 'filmstrip-track w-max' : 'flex-wrap'} gap-0`}>
+      <div className={`flex bg-[#100E0C] ${scroll ? 'filmstrip-track w-max' : 'flex-wrap'} gap-0`}>
         {sequence.map((src, i) => (
-          <div key={i} className="flex items-stretch bg-[#0E0E10] border-y border-line-soft">
+          <div key={i} className="flex items-stretch bg-[#100E0C] border-y border-line-soft">
             <Sprockets />
             <div className={`${frameClass} relative flex-shrink-0 overflow-hidden border-x border-line-soft bg-panel`}>
               <img

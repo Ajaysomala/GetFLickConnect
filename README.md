@@ -61,15 +61,15 @@ If you rename the repository, update the `base` value in [vite.config.ts](vite.c
 
 ## Design system
 
-Tokens live in `src/index.css` under `@theme`. Color direction: near-black (`#0B0B0D`)
-background, signal-orange (`#FF5A1F`) as the single accent (a "REC tally light" motif —
-used for live/availability states throughout). Type: Archivo for display, Inter for
-body, IBM Plex Mono for technical specs (camera/lens/exposure-style readouts).
+Tokens live in `src/index.css` under `@theme`. Color direction: warm charcoal
+(`#0A0908`) background, champagne gold (`#D4AF6E`) as the single accent —
+editorial cinema motif used for live/availability states. Type: Syne for display,
+Outfit for body, IBM Plex Mono for technical specs (camera/lens/exposure-style
+readouts).
 
-Photos are zero-dependency: `src/lib/placeholder.ts` generates deterministic SVG
-gradient placeholders (data URIs, no network request), so the prototype renders fully
-offline and never shows broken images. Swap in real photo URLs in `src/lib/mockData.ts`
-whenever real creator photography is available.
+Photos use curated Unsplash examples via `src/lib/galleryImages.ts` (weddings,
+aerial, fashion, sports, and more). SVG placeholders in `src/lib/placeholder.ts`
+remain available for new registrations until real portfolio uploads land.
 
 ## What's next
 
