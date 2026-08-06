@@ -1,5 +1,5 @@
 import type { Creator } from '../types';
-import { placeholderSet } from './placeholder';
+import { galleryFor } from './galleryImages';
 
 export const SPECIALTY_OPTIONS = [
   'Weddings',
@@ -54,7 +54,7 @@ export const SEED_CREATORS: Creator[] = [
     id: 'cam-01',
     name: 'Marcus Chen',
     avatarInitials: 'MC',
-    avatarColor: '#FF5A1F',
+    avatarColor: '#D4AF6E',
     location: 'Los Angeles, CA',
     yearsExperience: 8,
     bio: 'Cinematic storyteller specializing in luxury weddings and brand films. I shoot for emotion first, technical precision second.',
@@ -72,7 +72,7 @@ export const SEED_CREATORS: Creator[] = [
     hourlyRate: 150,
     reelTitle: 'Marcus Chen — Cinematic Wedding Reel 2026',
     reelId: 'reel-mc-2026',
-    photos: placeholderSet('cam-01', 9),
+    photos: galleryFor('cam-01', 9),
     isAvailable: true,
     rating: 4.9,
     reviewCount: 96,
@@ -110,7 +110,7 @@ export const SEED_CREATORS: Creator[] = [
     hourlyRate: 120,
     reelTitle: 'Isabella Romero — Luxury Real Estate Reel',
     reelId: 'reel-ir-2026',
-    photos: placeholderSet('cam-02', 9),
+    photos: galleryFor('cam-02', 9),
     isAvailable: true,
     rating: 4.8,
     reviewCount: 64,
@@ -146,7 +146,7 @@ export const SEED_CREATORS: Creator[] = [
     hourlyRate: 180,
     reelTitle: 'Devon Brooks — Action & Music Video Reel',
     reelId: 'reel-db-2026',
-    photos: placeholderSet('cam-03', 9),
+    photos: galleryFor('cam-03', 9),
     isAvailable: false,
     rating: 5.0,
     reviewCount: 41,

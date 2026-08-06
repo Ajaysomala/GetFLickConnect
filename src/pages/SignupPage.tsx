@@ -34,9 +34,9 @@ function OtpInput({ value, onChange }: { value: string[]; onChange: (v: string[]
           className="w-12 h-14 text-center text-xl font-bold rounded-xl border-2 outline-none transition-all duration-200"
           style={{
             background: 'rgba(10,16,32,.9)',
-            borderColor: digit ? 'rgba(99,179,237,.7)' : 'rgba(99,179,237,.18)',
+            borderColor: digit ? 'rgba(212,175,110,.7)' : 'rgba(212,175,110,.18)',
             color: '#E8F4FF',
-            boxShadow: digit ? '0 0 0 3px rgba(99,179,237,.12)' : 'none',
+            boxShadow: digit ? '0 0 0 3px rgba(212,175,110,.12)' : 'none',
           }} />
       ))}
     </div>
@@ -90,7 +90,7 @@ export function SignupPage() {
       addCreator({
         id: userId, name: form.name,
         avatarInitials: form.name.split(' ').map(w => w[0]).join('').slice(0, 2).toUpperCase(),
-        avatarColor: '#3B82F6',
+        avatarColor: '#D4AF6E',
         location: '', yearsExperience: 0, bio: '', services: 'Photographer',
         specialties: [], certifications: [], gear: { bodies: [], lenses: [], audioLighting: [] },
         hasDrone: false, isPart107Certified: false, hourlyRate: 0,
@@ -117,7 +117,7 @@ export function SignupPage() {
         </div>
         <div className="relative z-10 text-center px-16 animate-fade-up">
           <div className="w-20 h-20 rounded-2xl flex items-center justify-center mx-auto mb-8 pulse-ring"
-            style={{ background: 'linear-gradient(135deg,#3B82F6,#4FD1C5)', boxShadow: '0 16px 40px rgba(99,179,237,.35)' }}>
+            style={{ background: 'linear-gradient(135deg,#E8C98A,#D4AF6E)', boxShadow: '0 16px 40px rgba(212,175,110,.35)' }}>
             <Camera size={32} className="text-white" />
           </div>
           <h2 className="font-display text-4xl font-black mb-4 leading-tight">
@@ -156,9 +156,9 @@ export function SignupPage() {
                   <button key={type} onClick={() => setAccountType(type)}
                     className="flex-1 py-3 rounded-xl text-sm font-semibold border transition-all"
                     style={{
-                      borderColor: accountType === type ? 'rgba(99,179,237,.7)' : 'rgba(99,179,237,.14)',
-                      background: accountType === type ? 'rgba(99,179,237,.12)' : 'transparent',
-                      color: accountType === type ? '#4FD1C5' : '#7BA8CC',
+                      borderColor: accountType === type ? 'rgba(212,175,110,.7)' : 'rgba(212,175,110,.14)',
+                      background: accountType === type ? 'rgba(212,175,110,.12)' : 'transparent',
+                      color: accountType === type ? '#E8C98A' : '#A39B8F',
                     }}>
                     {type === 'client' ? <><User size={14} className="inline mr-1.5" />I'm a Client</> : <><Camera size={14} className="inline mr-1.5" />I'm a Creator</>}
                   </button>
@@ -216,7 +216,7 @@ export function SignupPage() {
               <button onClick={() => setStep('info')} className="flex items-center gap-1 text-text-faint text-sm mb-8 hover:text-text transition-colors">
                 <ChevronLeft size={16} /> Back
               </button>
-              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(99,179,237,.12)', border: '1px solid rgba(99,179,237,.2)' }}>
+              <div className="w-12 h-12 rounded-xl flex items-center justify-center mb-6" style={{ background: 'rgba(212,175,110,.12)', border: '1px solid rgba(212,175,110,.2)' }}>
                 <ShieldCheck size={22} className="text-signal" />
               </div>
               <h1 className="font-display text-3xl font-black mb-2">Verify your number</h1>

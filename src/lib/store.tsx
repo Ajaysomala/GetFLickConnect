@@ -1,5 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 import type { Creator, AuthUser } from '../types';
+import { SEED_CREATORS } from './mockData';
 
 interface StoreShape {
   creators: Creator[];
@@ -15,7 +16,7 @@ interface StoreShape {
 const StoreContext = createContext<StoreShape | null>(null);
 
 export function StoreProvider({ children }: { children: ReactNode }) {
-  const [creators, setCreators] = useState<Creator[]>([]);
+  const [creators, setCreators] = useState<Creator[]>(SEED_CREATORS);
   const [authUser, setAuthUser] = useState<AuthUser | null>(null);
   const [currentCreatorId, setCurrentCreatorId] = useState<string | null>(null);
 
